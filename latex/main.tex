@@ -30,17 +30,28 @@
     showstringspaces=false
 }
 
+% Custom command for practical title
+\newcounter{practicalno} % Create a new counter for practical numbers
+\setcounter{practicalno}{-1} % Initialize the counter to 0
 \newcommand{\practicaltitle}[1]{
+    \stepcounter{practicalno} % Increment the practical number counter
     \newpage
     \begin{center}
-        \Large\textbf{#1} \\
-        \normalsize\vspace{0.5cm}
+        \vspace{1cm}
+        \Large\textbf{Practical \thepracticalno} \\
+        \vspace{0.5cm}
+        \Large\textbf{#1} % Display the title on the next line
+        \normalsize\vspace{1cm}
     \end{center}
 }
 
-\title{\textbf{Practical 1: Handling Various Data Types}}
-% \practicaltitle{Practical 2: Another Java Topic}
-\author{}
+%Redefine \subsection command to use hashtags instead of numbers
+\titleformat{\subsection}[block]{\bfseries\large}{\texttt{\#}}{1em}{}
+% Redefine \subsubsection command to use arrow instead of numbers
+\titleformat{\subsubsection}[block]{\bfseries\normalsize}{\texttt{>}}{1em}{}
+
+\title{\textbf{Java Practical}}
+\author{Mayank}
 \date{}
 
 % Redefine \subsection command to use hashtags instead of numbers
@@ -50,6 +61,8 @@
 
 \maketitle
 
+\practicaltitle{Introduction to Java}
+
 \section{Introduction to Java}
 JAVA was developed by James Gosling at Sun Microsystems Inc in May 1995 and later acquired by Oracle Corporation. It is a simple programming language. Java makes writing, compiling, and debugging programming easy. It helps to create reusable code and modular programs. Java is a class-based, object-oriented programming language and is designed to have as few implementation dependencies as possible. A general-purpose programming language made for developers to write once run anywhere that is compiled Java code can run on all platforms that support Java. Java applications are compiled to byte code that can run on any Java Virtual Machine. The syntax of Java is similar to C/C++.
 
@@ -57,12 +70,24 @@ Java is widely used for developing applications for desktop, web, and mobile dev
 
 \section{Java Syntax}
 Java syntax is the set of rules defining how a Java program is written and interpreted.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/basic_syntax.png}
-    \caption{Basic Syntax of Java Program}
-    \label{fig:sample_image}
-\end{figure}
+\subsubsection{Code: }
+\begin{lstlisting}
+public class Syntax {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+\end{lstlisting}
+
+% \subsection{Output: }
+% \begin{}
+%     \fbox{
+%         \parbox{0.9\linewidth}{
+%             \centering
+%             \texttt{Hello, World!}
+%         }
+%     }
+% \end{}
 
 \subsection*{public class Main}
 \begin{itemize}[leftmargin=2cm]
@@ -96,15 +121,40 @@ Variables are containers for storing data values. In Java, every variable must b
     \item \textbf{Static Variables}: Declared with the \texttt{static} keyword. These are shared among all instances of the class.
 \end{itemize}
 
+
+\setcounter{section}{0}
+\practicaltitle{Handling Various Data Types}
+
 \section{Data Types in Java}
 Java has two categories of data types: \textbf{Primitive Data Types} and \textbf{Reference/Object Data Types}.
 
 \subsection{Primitive Data Types}
 Primitive data types are the most basic data types available in Java.
+\subsubsection{Code: }
+\begin{lstlisting}
+public class Data {
+    public static void main(String[] args) {
+        int myNum = 5;               
+        float myFloatNum = 5.99f;
+        double myDoubNum = 5.9999d;  
+        char myLetter = 'D';        
+        boolean myBool = true;       
+        String myText = "Hello";     
+
+        System.out.println(myNum);
+        System.out.println(myFloatNum);
+        System.out.println(myDoubNum);
+        System.out.println(myLetter);
+        System.out.println(myBool);
+        System.out.println(myText);
+    }
+}
+\end{lstlisting}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/DataType.png}
-    \caption{Primitive Data types in Java}
+    \includegraphics[width=0.9\linewidth]{images/DataOutput.png}
+    \caption{Primitve Data Types}
     \label{fig:sample_image}
 \end{figure}
 
@@ -121,10 +171,31 @@ Primitive data types are the most basic data types available in Java.
 
 \subsection{Non Primitive Data Types}
 Reference types in Java are Strings and arrays:
+\subsubsection{Code: }
+\begin{lstlisting}
+public class NonPrimitive {
+    public static void main(String[] args) {
+        // String Data Type
+        String stringVar = "Hello, Java!";
+        System.out.println("\nString Data Type:");
+        System.out.println("String: " + stringVar);
+
+        // Array Data Type
+        int[] intArray = {1, 2, 3, 4, 5};
+        System.out.println("\nArray Data Type:");
+        System.out.print("intArray: ");
+        for (int num : intArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}  
+\end{lstlisting}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/non_primitve.png}
-    \caption{Non-Primitive Data types in Java}
+    \includegraphics[width=0.9\linewidth]{images/NonPrimData.png}
+    \caption{Non-Primitve Data Types}
     \label{fig:sample_image}
 \end{figure}
 
@@ -135,8 +206,9 @@ Reference types in Java are Strings and arrays:
 
 \setcounter{section}{0}
 
-\practicaltitle{Practical 2: Type casting}
-Type casting is when you assign a value of one primitive data type to another type. There are two types of type casting, implicit typecasting and explicit typecasting which are explained below: 
+% \practicaltitle{Practical 2: Type casting}
+\practicaltitle{Type casting}
+Type casting is when you assign a value of one primitive data type to another type. There are two types of type casting, implicit typecasting and explicit typecasting which are explained below:
 
 \section{Implicit Type Casting}
 Implicit type casting is done automatically when passing a smaller size type to a larger size type.
@@ -148,9 +220,21 @@ Implicit type casting is done automatically when passing a smaller size type to 
         }
     }
 \end{center}
+\subsubsection{Code: }
+\begin{lstlisting}
+public class Implicit {
+    public static void main(String[] args) {
+        int myInt = 9;
+        double myDouble = myInt; // Automatic casting: int to double
+        System.out.println(myInt); // Outputs 9
+        System.out.println(myDouble); // Outputs 9.0
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/implicit.png}
+    \includegraphics[width=0.9\linewidth]{images/ImplicitOut.png}
     \caption{Implicit Type Conversion}
     \label{fig:sample_image}
 \end{figure}
@@ -165,9 +249,21 @@ Explicit type casting must be done manually by placing the type in parentheses (
         }
     }
 \end{center}
+\begin{lstlisting}
+public class Explicit {
+    public static void main(String[] args) {
+        double myDouble = 9.78d;
+        int myInt = (int) myDouble; // Manual casting: double to int
+    
+        System.out.println(myDouble);   // Outputs 9.78
+        System.out.println(myInt);      // Outputs 9
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/explicit.png}
+    \includegraphics[width=0.9\linewidth]{images/ExplicitOut.png}
     \caption{Explicit Type Conversion}
     \label{fig:sample_image}
 \end{figure}
@@ -178,14 +274,28 @@ Explicit type casting must be done manually by placing the type in parentheses (
 
 \section{1-Dimensional Array}
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
-\subsection{Code: }
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/array.png}
-    \caption{1 Dimensional Array}
-    \label{fig:sample_image}
-\end{figure}
-\subsection{Output: }
+\subsubsection{Code: }
+\begin{lstlisting}
+public class Array {
+    public static void main(String[] args) {
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(cars[0]); 
+        System.out.println(cars[1]); 
+        System.out.println(cars[2]); 
+        System.out.println(cars[3]); 
+        // Changing an element of an array
+        cars[0] = "audi";
+        System.out.println(cars[0]); 
+        // Length of an array
+        System.out.println(cars.length);
+        // Loop through an array
+        for (String arr  : cars) {
+            System.out.println(arr);
+        }
+    }
+}  
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{images/output2.png}
@@ -195,14 +305,32 @@ Arrays are used to store multiple values in a single variable, instead of declar
 
 \section{Multi Dimensional Array}
 A multidimensional array is an array of arrays. Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
-\subsection{Code: }
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/array_2d.png}
-    \caption{Multi Dimensional Array}
-    \label{fig:sample_image}
-\end{figure}
-\subsection{Output: }
+\subsubsection{Code: }
+\begin{lstlisting}
+    // Program for Multi-Dimensional Array
+
+public class Array2D {
+    public static void main(String[] args) {
+        int[][] my2DArr = {{10, 20, 30, 40}, {50, 60, 70}};
+        // Accessing Elemensts of array
+        System.out.println(my2DArr[0][0]); // 10
+        System.out.println(my2DArr[1][2]); // 70
+        // change element of array
+        my2DArr[0][0] = 100;
+        System.out.println(my2DArr[0][0]); //100
+
+        // Loop through a multi dimensional array
+        System.out.println("Looping through an array");
+        for (int[] row : my2DArr) {
+            for(int i : row) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+  
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{images/output3.png}
@@ -212,20 +340,115 @@ A multidimensional array is an array of arrays. Multidimensional arrays are usef
 
 \setcounter{section}{0}
 
-\practicaltitle{Practical 4: Various Control Strucutures}
-In Java, control structures are constructs that dictate the order in which statements are executed in a program. They enable conditional execution, looping, and altering the normal sequential flow of control.
+\practicaltitle{Various Control Strucutures}
 
+\section{For loop}
+For loop provides a concise way of writing the loop structure. Unlike a while loop, a
+for statement consumes the initialization, condition and increment/decrement in one line
+thereby providing a shorter, easy to debug structure of looping.
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
+
+public class ForLoop {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/ForOut.png}
+    \caption{output of for loop}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{While loop}
+A while loop is a control flow statement that allows code to be executed repeatedly
+based on a given Boolean condition. The while loop can be thought of as a repeating if
+statement.
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
+
+public class WhileLoop {
+
+    public static void main(String[] args) {
+// Sum of first n numbers
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        while (n > 0) {
+            sum += n--;
+        }
+        System.out.println(sum);
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/WhileOut.png}
+    \caption{output of while loop}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Do-While loop}
+Do-While loop is similar to while loop with only difference that it checks for condition
+after executing the statements, and therefore is an example of Exit Control Loop.
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
+
+public class DoWhile {
+
+    public static void main(String[] args) {
+// Sum of first n numbers
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        do {
+            sum += n--;
+        } while (n > 0);
+        System.out.println(sum);
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/image.png}
+    \caption{output of do-while loop}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Various Decision Strucutures}
 
 \section{The IF statement}
 Use the if statement to specify a block of Java code to be executed if a condition is true.
-\subsection{Code: }
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\linewidth]{images/if.png}
-    \caption{if statement}
-    \label{fig:sample_image}
-\end{figure}
-\subsection{Output: }
+\subsubsection{Code: }
+\begin{lstlisting}
+public class If {
+    public static void main(String[] args) {
+        if (20 > 18) {
+            System.out.println("20 is greater than 18");
+            }
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{images/output4.png}
@@ -235,14 +458,20 @@ Use the if statement to specify a block of Java code to be executed if a conditi
 
 \section{The IF-Else statement}
 Executes one block of code if its condition evaluates to true, and another block of code if it evaluates to false.
-\subsection{Code: }
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\linewidth]{images/if_else.png}
-    \caption{if-else statement}
-    \label{fig:sample_image}
-\end{figure}
-\subsection{Output: }
+\subsubsection{Code: }
+\begin{lstlisting}
+public class IfElse {
+    public static void main(String[] args) {
+        int time = 20;
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{images/output5.png}
@@ -250,23 +479,128 @@ Executes one block of code if its condition evaluates to true, and another block
     \label{fig:sample_image}
 \end{figure}
 
+\section{The IF-Else ladder}
+Executes one block of code if its condition evaluates to true, and then checks other
+coditions given in else if statements if it is false, or executes the last else block if nothing
+is true
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
 
-\setcounter{section}{0}
+public class IfElseLad {
 
-\practicaltitle{Practical 4: Addition Of Two Numbers}
-\section{Add Two Numbers by taking input from the user}
-\subsection{Code: }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter age -> ");
+        int age = sc.nextInt();
+        if (age < 12) {
+            System.out.println("Child"); 
+        }else if (age < 18) {
+            System.out.println("Teenager"); 
+        }else {
+            System.out.println("Adult");
+        }
+    }
+}
+
+    \end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/add_num.png}
-    \caption{Code of addition of two numbers}
+    \includegraphics[width=0.9\linewidth]{images/IfElseLad.png}
+    \caption{output of if-else-ladder statement}
     \label{fig:sample_image}
 \end{figure}
-\subsection{Output: }
+
+\section{Nested If-Else}
+We can put If-Else statements inside otehr If-Else statemetns in order to build more
+complex logic
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
+
+public class NestedIf {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a -> ");
+        int a = sc.nextInt();
+        System.out.print("Enter b -> ");
+        int b = sc.nextInt();
+        System.out.print("Enter c -> ");
+        int c = sc.nextInt();
+        if (a > b) {
+            if (a > c) {
+                System.out.println("A is greatest"); 
+            }else {
+                System.out.println("C is greatest");
+            }
+        } else {
+            if (b > c) {
+                System.out.println("B is greatest"); 
+            }else {
+                System.out.println("C is greatest");
+            }
+        }
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/output1.png}
-    \caption{output of addition of two numbers}
+    \includegraphics[width=0.9\linewidth]{images/NestOut.png}
+    \caption{output of nested-if statement}
     \label{fig:sample_image}
 \end{figure}
+
+\section{Switch statement}
+The switch statement in Java is a multi-way branch statement. In simple words, the Java
+switch statement executes one statement from multiple conditions.
+\subsubsection{Code: }
+\begin{lstlisting}
+import java.util.Scanner;
+
+public class Switch {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int day = sc.nextInt();
+        switch (day) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+            case 7:
+                System.out.println("Saturday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+}
+    
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/SwitchOut.png}
+    \caption{output of switch statement}
+    \label{fig:sample_image}
+\end{figure}
+
 \end{document}
