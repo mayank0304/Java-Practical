@@ -603,4 +603,223 @@ public class Switch {
     \label{fig:sample_image}
 \end{figure}
 
+\setcounter{section}{0}
+
+% \practicaltitle{Practical 2: Type casting}
+\practicaltitle{Recursion}
+Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+
+\section{Example of Recursion}
+\subsection{Code: }
+\begin{lstlisting}
+public class Recursion {
+    public static void main(String[] args) {
+        int result = sum(10);
+        System.out.println(result);
+    }
+    public static int sum(int k) {
+        if (k > 0) {
+        return k + sum(k - 1);
+        } else {
+        return 0;
+        }
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/RecExp.png}
+    \caption{Recursion Example}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Factorial of a number using Recursion}
+\subsection{Code: }
+\begin{lstlisting}
+public class Factorial {
+    static int factorial(int n)
+    {
+        if (n == 0 || n == 1)
+            return 1;
+        return n * factorial(n - 1);
+    }
+    public static void main(String[] args)
+    {
+        int ans = factorial(5);
+        System.out.println("Factorial of 5 is :" + ans);
+    }
+}   
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/RecursionOut.png}
+    \caption{Factorial using example}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+% \practicaltitle{Practical 2: Type casting}
+\practicaltitle{Method Overloading by passing objects as arguments}
+In object-oriented programming, method overloading is a feature that allows you to define multiple methods with the same name but different parameters. In the context of passing objects as arguments, method overloading can be used to handle different types or classes of objects.
+
+\section{Example of Method Overloading by passing objects as arguments}
+\subsection{Code: }
+\begin{lstlisting}
+class Circle {
+    double radius;
+    Circle(double radius) {
+        this.radius = radius;
+    }
+}
+
+class Rectangle {
+    double length, width;
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+}
+
+class AreaCalculator {
+    double calculateArea(Circle circle) {
+        return Math.PI * circle.radius * circle.radius;
+    }
+    double calculateArea(Rectangle rectangle) {
+        return rectangle.length * rectangle.width;
+    }
+}
+public class MOPOAA {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        Rectangle rectangle = new Rectangle(4, 6);
+        AreaCalculator calculator = new AreaCalculator();
+        System.out.println
+        ("Area of Circle: "+calculator.calculateArea(circle));
+        System.out.println
+        ("Area of Rectangle:"+calculator.calculateArea(rectangle));
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/MOPOAA.png}
+    \caption{Method Overloading by passing objects as arguments}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+% \practicaltitle{Practical 2: Type casting}
+\practicaltitle{Constructor Overloading by passing objects as arguments}
+Constructor overloading in object-oriented programming allows a class to have multiple constructors with different parameter lists. This enables the creation of objects in different ways. When you overload constructors by passing objects as arguments, you can create new objects based on existing objects.
+
+\section{Example of Constructor Overloading by passing objects as arguments}
+\subsection{Code: }
+\begin{lstlisting}
+class Book {
+    String title;
+    String author;
+    int pages;
+    // Constructor 1: No arguments
+    Book() {
+        this.title = "Unknown";
+        this.author = "Unknown";
+        this.pages = 0;
+    }
+    // Constructor 2: Passing title, author, and pages
+    Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+    /*
+    Constructor 3: Passing an existing Book object
+    (copy constructor)
+    */
+    Book(Book existingBook) {
+        this.title = existingBook.title;
+        this.author = existingBook.author;
+        this.pages = existingBook.pages;
+    }
+    void displayDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+    }
+}
+public class COBPOAA {
+    public static void main(String[] args) {
+        // Using Constructor 1
+        Book book1 = new Book();
+        System.out.println("Book 1 details:");
+        book1.displayDetails();
+
+        // Using Constructor 2
+        Book book2 = new Book("1984", "George Orwell", 328);
+        System.out.println("\nBook 2 details:");
+        book2.displayDetails();
+
+        // Using Constructor 3 (Copy Constructor)
+        Book book3 = new Book(book2);
+        System.out.println
+        ("\nBook 3 details (copied from Book 2):");
+        book3.displayDetails();
+    }
+}    
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/COBPAA.png}
+    \caption{Constructor Overloading by passing objects as arguments}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+% \practicaltitle{Practical 2: Type casting}
+\practicaltitle{Command Line Arguments}
+Command line arguments are parameters passed to the main method when you run a program from the command line.
+\section{Syntax}
+\subsection{Code: }
+\begin{lstlisting}
+public static void main(String[] args) {}
+\end{lstlisting}
+Here, args is an array of String objects that holds the command line arguments passed to the program.
+
+\section{Example of Command Line Argumesnts}
+\subsection{Code: }
+\begin{lstlisting}
+public static void main(String[] args) {
+    // Check if any arguments were passed
+    if (args.length > 0) {
+        System.out.println("Command line arguments:");
+
+        // Iterate over the arguments and print each one
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("Argument " + i + ": " + args[i]);
+        }
+    } else {
+        System.out.println
+        ("No command line arguments were passed.");
+    }
+}
+}
+\end{lstlisting}
+\section{How to Run the Program with Command Line Arguments}
+\subsection{Run the program with following command: }
+\begin{lstlisting}
+java CommandLineExample.java John Jinny Kia
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/CLA.png}
+    \caption{Command Line Arguments}
+    \label{fig:sample_image}
+\end{figure}
 \end{document}
