@@ -780,6 +780,132 @@ public class COBPOAA {
 \end{figure}
 
 \setcounter{section}{0}
+\practicaltitle{Access Control and the Usage of Static, Final, and Finalize}
+
+In Java, access control mechanisms and the usage of keywords such as \texttt{static}, \texttt{final}, and the method \texttt{finalize()} are essential components of object-oriented programming. They help in controlling the visibility of class members, managing shared resources, and enhancing performance.
+
+\section{Access Control}
+Java provides four types of access control modifiers:
+\begin{itemize}
+  \item \textbf{Public:} Members are accessible from any other class.
+  \item \textbf{Protected:} Members are accessible within the same package and by subclasses.
+  \item \textbf{Default:} (No modifier) Members are accessible within the same package.
+  \item \textbf{Private:} Members are accessible only within the class itself.
+\end{itemize}
+
+\subsection{Example of Access Control Modifiers}
+\subsection{Code: }
+\begin{lstlisting}
+class Example {
+    public int publicVar = 10;
+    protected int protectedVar = 20;
+    int defaultVar = 30;
+    private int privateVar = 40;
+}
+\end{lstlisting}
+
+\section{Static Keyword}
+The \texttt{static} keyword in Java is used for memory management. It can be applied to variables, methods, blocks, and nested classes. A \texttt{static} member belongs to the class rather than an instance of the class.
+
+\subsection{Usage of Static Variables and Methods}
+\subsection{Code: }
+\begin{lstlisting}
+class StaticExample {
+    static int count = 0;
+
+    // Static method
+    static void increment() {
+        count++;
+    }
+}
+\end{lstlisting}
+In this example, the static variable \texttt{count} is shared across all instances of the \texttt{StaticExample} class, and the \texttt{increment()} method can be called without creating an object.
+
+\section{Final Keyword}
+The \texttt{final} keyword can be used to define constants, prevent method overriding, and prevent inheritance. When applied to:
+\begin{itemize}
+  \item \textbf{Variables:} Makes the variable constant, meaning it cannot be reassigned.
+  \item \textbf{Methods:} Prevents the method from being overridden in subclasses.
+  \item \textbf{Classes:} Prevents the class from being subclassed.
+\end{itemize}
+
+\subsection{Example of Final Variable, Method, and Class}
+\subsection{Code: }
+\begin{lstlisting}
+final class FinalClass {
+    final int MAX_VALUE = 100;
+
+    final void display() {
+        System.out.println("This is a final method.");
+    }
+}
+
+// Uncommenting the below class will result in a compile-time error
+// class SubClass extends FinalClass {}
+\end{lstlisting}
+
+\section{Finalize Method}
+The \texttt{finalize()} method is called by the garbage collector before an object is destroyed. It is used to perform cleanup actions before an object is garbage collected.
+
+\subsection{Usage of Finalize Method}
+\subsection{Code: }
+\begin{lstlisting}
+class FinalizeExample {
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalize method called.");
+    }
+    
+    public static void main(String[] args) {
+        FinalizeExample obj = new FinalizeExample();
+        obj = null;  // Make the object eligible for garbage collection
+        System.gc(); // Request garbage collection
+    }
+}
+\end{lstlisting}
+
+\section{Example}
+\begin{lstlisting}
+class AccessDemo {
+    public int publicVar = 10;
+    private int privateVar = 20;
+    
+    static int staticVar = 30;
+    
+    final int finalVar = 40;
+
+    public void show() {
+        System.out.println("Public Variable: " + publicVar);
+        System.out.println("Private Variable: " + privateVar);
+        System.out.println("Static Variable: " + staticVar);
+        System.out.println("Final Variable: " + finalVar);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalize method called.");
+    }
+
+    public static void main(String[] args) {
+        AccessDemo demo = new AccessDemo();
+        demo.show();
+
+        // Static variable can be accessed directly without creating an object
+        System.out.println("Accessing static variable without object: " + AccessDemo.staticVar);
+
+        // Making object eligible for garbage collection
+        demo = null;
+        System.gc();  // Request garbage collection
+    }
+}
+% \end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/9.png}
+    \caption{Example Program Output}
+\end{figure}
+\setcounter{section}{0}
 
 % \practicaltitle{Practical 2: Type casting}
 \practicaltitle{Command Line Arguments}
