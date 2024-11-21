@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 40) (preloaded format=pdflatex 2024.8.4)  8 SEP 2024 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 40) (preloaded format=pdflatex 2024.8.4)  11 NOV 2024 09:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -178,6 +178,39 @@ LaTeX Warning: Label `fig:sample_image' multiply defined.
 
 LaTeX Warning: Label `fig:sample_image' multiply defined.
 
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_image' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -264,166 +297,358 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 <images/DataOutput.png, id=18, 766.865pt x 190.7125pt>
 File: images/DataOutput.png Graphic file (type png)
 <use images/DataOutput.png>
-Package pdftex.def Info: images/DataOutput.png  used on input line 156.
+Package pdftex.def Info: images/DataOutput.png  used on input line 146.
 (pdftex.def)             Requested size: 407.66833pt x 101.38559pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 164.
+(Font)              <12> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 164.
+(Font)              <8> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 164.
+(Font)              <6> on input line 154.
  [4 <./images/DataOutput.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 178.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 168.
 <images/NonPrimData.png, id=24, 770.88pt x 199.74625pt>
 File: images/NonPrimData.png Graphic file (type png)
 <use images/NonPrimData.png>
-Package pdftex.def Info: images/NonPrimData.png  used on input line 197.
+Package pdftex.def Info: images/NonPrimData.png  used on input line 187.
 (pdftex.def)             Requested size: 407.66833pt x 105.63031pt.
  [5 <./images/NonPrimData.png>]
 <images/ImplicitOut.png, id=31, 771.88374pt x 124.465pt>
 File: images/ImplicitOut.png Graphic file (type png)
 <use images/ImplicitOut.png>
-Package pdftex.def Info: images/ImplicitOut.png  used on input line 237.
+Package pdftex.def Info: images/ImplicitOut.png  used on input line 226.
 (pdftex.def)             Requested size: 407.66833pt x 65.73633pt.
  [6 <./images/ImplicitOut.png>]
 <images/ExplicitOut.png, id=37, 771.88374pt x 124.465pt>
 File: images/ExplicitOut.png Graphic file (type png)
 <use images/ExplicitOut.png>
-Package pdftex.def Info: images/ExplicitOut.png  used on input line 266.
+Package pdftex.def Info: images/ExplicitOut.png  used on input line 255.
 (pdftex.def)             Requested size: 407.66833pt x 65.73633pt.
  [7 <./images/ExplicitOut.png>]
 <images/output2.png, id=43, 778.91pt x 270.00874pt>
 File: images/output2.png Graphic file (type png)
 <use images/output2.png>
-Package pdftex.def Info: images/output2.png  used on input line 301.
+Package pdftex.def Info: images/output2.png  used on input line 290.
 (pdftex.def)             Requested size: 407.66833pt x 141.31586pt.
  [8 <./images/output2.png>]
 <images/output3.png, id=48, 777.90625pt x 309.155pt>
 File: images/output3.png Graphic file (type png)
 <use images/output3.png>
-Package pdftex.def Info: images/output3.png  used on input line 336.
+Package pdftex.def Info: images/output3.png  used on input line 325.
 (pdftex.def)             Requested size: 407.66833pt x 162.02104pt.
  [9 <./images/output3.png>]
 <images/ForOut.png, id=53, 758.835pt x 127.47626pt>
 File: images/ForOut.png Graphic file (type png)
 <use images/ForOut.png>
-Package pdftex.def Info: images/ForOut.png  used on input line 369.
+Package pdftex.def Info: images/ForOut.png  used on input line 357.
 (pdftex.def)             Requested size: 407.66833pt x 68.48407pt.
  [10 <./images/ForOut.png>]
 <images/WhileOut.png, id=58, 758.835pt x 127.47626pt>
 File: images/WhileOut.png Graphic file (type png)
 <use images/WhileOut.png>
-Package pdftex.def Info: images/WhileOut.png  used on input line 400.
+Package pdftex.def Info: images/WhileOut.png  used on input line 388.
 (pdftex.def)             Requested size: 407.66833pt x 68.48407pt.
- [11 <./images/WhileOut.png>]
-<images/image.png, id=63, 758.835pt x 127.47626pt>
+<images/image.png, id=59, 758.835pt x 127.47626pt>
 File: images/image.png Graphic file (type png)
 <use images/image.png>
-Package pdftex.def Info: images/image.png  used on input line 430.
+Package pdftex.def Info: images/image.png  used on input line 417.
 (pdftex.def)             Requested size: 407.66833pt x 68.48407pt.
- [12 <./images/image.png>]
+ [11 <./images/WhileOut.png>] [12 <./images/image.png>]
 <images/output4.png, id=68, 752.8125pt x 123.46124pt>
 File: images/output4.png Graphic file (type png)
 <use images/output4.png>
-Package pdftex.def Info: images/output4.png  used on input line 454.
+Package pdftex.def Info: images/output4.png  used on input line 441.
 (pdftex.def)             Requested size: 407.66833pt x 66.85834pt.
 <images/output5.png, id=69, 757.83125pt x 85.31876pt>
 File: images/output5.png Graphic file (type png)
 <use images/output5.png>
-Package pdftex.def Info: images/output5.png  used on input line 477.
+Package pdftex.def Info: images/output5.png  used on input line 464.
 (pdftex.def)             Requested size: 407.66833pt x 45.89697pt.
  [13 <./images/output4.png>]
 <images/IfElseLad.png, id=75, 757.83125pt x 106.3975pt>
 File: images/IfElseLad.png Graphic file (type png)
 <use images/IfElseLad.png>
-Package pdftex.def Info: images/IfElseLad.png  used on input line 510.
+Package pdftex.def Info: images/IfElseLad.png  used on input line 495.
 (pdftex.def)             Requested size: 407.66833pt x 57.23624pt.
  [14 <./images/output5.png> <./images/IfElseLad.png>]
 <images/NestOut.png, id=81, 760.8425pt x 130.4875pt>
 File: images/NestOut.png Graphic file (type png)
 <use images/NestOut.png>
-Package pdftex.def Info: images/NestOut.png  used on input line 551.
+Package pdftex.def Info: images/NestOut.png  used on input line 535.
 (pdftex.def)             Requested size: 407.66833pt x 69.91862pt.
  [15 <./images/NestOut.png>]
 <images/SwitchOut.png, id=86, 761.84625pt x 104.39pt>
 File: images/SwitchOut.png Graphic file (type png)
 <use images/SwitchOut.png>
-Package pdftex.def Info: images/SwitchOut.png  used on input line 601.
+Package pdftex.def Info: images/SwitchOut.png  used on input line 583.
 (pdftex.def)             Requested size: 407.66833pt x 55.85843pt.
  [16 <./images/SwitchOut.png>]
 <images/RecExp.png, id=91, 466.74374pt x 75.28125pt>
 File: images/RecExp.png Graphic file (type png)
 <use images/RecExp.png>
-Package pdftex.def Info: images/RecExp.png  used on input line 632.
+Package pdftex.def Info: images/RecExp.png  used on input line 613.
 (pdftex.def)             Requested size: 407.66833pt x 65.75604pt.
  [17 <./images/RecExp.png>]
 <images/RecursionOut.png, id=96, 466.74374pt x 75.28125pt>
 File: images/RecursionOut.png Graphic file (type png)
 <use images/RecursionOut.png>
-Package pdftex.def Info: images/RecursionOut.png  used on input line 657.
+Package pdftex.def Info: images/RecursionOut.png  used on input line 636.
 (pdftex.def)             Requested size: 407.66833pt x 65.75604pt.
  [18 <./images/RecursionOut.png>] [19]
 <images/MOPOAA.png, id=105, 486.81876pt x 136.51pt>
 File: images/MOPOAA.png Graphic file (type png)
 <use images/MOPOAA.png>
-Package pdftex.def Info: images/MOPOAA.png  used on input line 709.
+Package pdftex.def Info: images/MOPOAA.png  used on input line 689.
 (pdftex.def)             Requested size: 407.66833pt x 114.31558pt.
  [20 <./images/MOPOAA.png>] [21]
 <images/COBPAA.png, id=113, 474.77374pt x 367.3725pt>
 File: images/COBPAA.png Graphic file (type png)
 <use images/COBPAA.png>
-Package pdftex.def Info: images/COBPAA.png  used on input line 777.
+Package pdftex.def Info: images/COBPAA.png  used on input line 757.
 (pdftex.def)             Requested size: 407.66833pt x 315.45769pt.
  [22 <./images/COBPAA.png>] [23]
-Overfull \hbox (29.90755pt too wide) in paragraph at lines 822--823
+Overfull \hbox (29.90755pt too wide) in paragraph at lines 802--803
 \OT1/cmr/m/n/12 In this ex-am-ple, the static vari-able \OT1/pcr/m/n/12 count \OT1/cmr/m/n/12 is shared across all in-stances of the \OT1/pcr/m/n/12 StaticExample
  []
 
 [24]
-Overfull \hbox (13.50587pt too wide) in paragraph at lines 861--862
+Overfull \hbox (13.50587pt too wide) in paragraph at lines 841--842
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (59.49625pt too wide) in paragraph at lines 893--894
+Overfull \hbox (59.49625pt too wide) in paragraph at lines 873--874
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (177.7572pt too wide) in paragraph at lines 894--896
+Overfull \hbox (177.7572pt too wide) in paragraph at lines 874--876
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 <images/9.png, id=124, 479.7925pt x 145.54375pt>
 File: images/9.png Graphic file (type png)
 <use images/9.png>
-Package pdftex.def Info: images/9.png  used on input line 905.
+Package pdftex.def Info: images/9.png  used on input line 885.
 (pdftex.def)             Requested size: 362.37569pt x 109.92593pt.
 [25] [26 <./images/9.png>]
 <images/CLA.png, id=133, 596.2275pt x 133.49875pt>
 File: images/CLA.png Graphic file (type png)
 <use images/CLA.png>
-Package pdftex.def Info: images/CLA.png  used on input line 949.
+Package pdftex.def Info: images/CLA.png  used on input line 928.
 (pdftex.def)             Requested size: 407.66833pt x 91.27904pt.
- [27] [28 <./images/CLA.png>] (./main.aux)
+ [27] [28 <./images/CLA.png>]
+<images/Programmer.png, id=141, 479.7925pt x 113.42375pt>
+File: images/Programmer.png Graphic file (type png)
+<use images/Programmer.png>
+Package pdftex.def Info: images/Programmer.png  used on input line 966.
+(pdftex.def)             Requested size: 407.66833pt x 96.37428pt.
+ [29 <./images/Programmer.png>]
+<images/puppy.png, id=146, 479.7925pt x 113.42375pt>
+File: images/puppy.png Graphic file (type png)
+<use images/puppy.png>
+Package pdftex.def Info: images/puppy.png  used on input line 1007.
+(pdftex.def)             Requested size: 407.66833pt x 96.37428pt.
+ [30 <./images/puppy.png>]
+<images/HInherit.png, id=151, 475.7775pt x 132.495pt>
+File: images/HInherit.png Graphic file (type png)
+<use images/HInherit.png>
+Package pdftex.def Info: images/HInherit.png  used on input line 1052.
+(pdftex.def)             Requested size: 407.66833pt x 113.53305pt.
+ [31 <./images/HInherit.png>] [32]
+<images/MetOvrr.png, id=160, 465.74pt x 117.43875pt>
+File: images/MetOvrr.png Graphic file (type png)
+<use images/MetOvrr.png>
+Package pdftex.def Info: images/MetOvrr.png  used on input line 1106.
+(pdftex.def)             Requested size: 407.66833pt x 102.79985pt.
+<images/mETHODdIAGRAM.png, id=161, 1190.4475pt x 525.965pt>
+File: images/mETHODdIAGRAM.png Graphic file (type png)
+<use images/mETHODdIAGRAM.png>
+Package pdftex.def Info: images/mETHODdIAGRAM.png  used on input line 1114.
+(pdftex.def)             Requested size: 407.66833pt x 180.10982pt.
+ [33 <./images/MetOvrr.png> <./images/mETHODdIAGRAM.png>]
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1143.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+Overfull \hbox (52.9262pt too wide) in paragraph at lines 1143--1144
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.78609pt too wide) in paragraph at lines 1150--1151
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.93582pt too wide) in paragraph at lines 1157--1158
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+<images/AbsOut.png, id=170, 474.77374pt x 161.60374pt>
+File: images/AbsOut.png Graphic file (type png)
+<use images/AbsOut.png>
+Package pdftex.def Info: images/AbsOut.png  used on input line 1179.
+(pdftex.def)             Requested size: 407.66833pt x 138.7669pt.
+ [35 <./images/AbsOut.png>]
+Overfull \hbox (52.9262pt too wide) in paragraph at lines 1214--1215
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/nest.png, id=175, 475.7775pt x 132.495pt>
+File: images/nest.png Graphic file (type png)
+<use images/nest.png>
+Package pdftex.def Info: images/nest.png  used on input line 1230.
+(pdftex.def)             Requested size: 407.66833pt x 113.53305pt.
+[36] [37 <./images/nest.png>]
+<images/Chain.png, id=184, 493.845pt x 105.39375pt>
+File: images/Chain.png Graphic file (type png)
+<use images/Chain.png>
+Package pdftex.def Info: images/Chain.png  used on input line 1269.
+(pdftex.def)             Requested size: 407.66833pt x 87.00237pt.
+ [38 <./images/Chain.png>] [39]
+Overfull \hbox (33.21603pt too wide) in paragraph at lines 1323--1324
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (256.59784pt too wide) in paragraph at lines 1324--1325
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (230.31763pt too wide) in paragraph at lines 1325--1326
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (230.31763pt too wide) in paragraph at lines 1326--1328
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.9262pt too wide) in paragraph at lines 1328--1329
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/29.png, id=192, 351.3125pt x 124.465pt>
+File: images/29.png Graphic file (type png)
+<use images/29.png>
+Package pdftex.def Info: images/29.png  used on input line 1336.
+(pdftex.def)             Requested size: 362.37569pt x 128.39409pt.
+[40 <./images/29.png>]
+Overfull \hbox (79.2064pt too wide) in paragraph at lines 1374--1375
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/Interface.png, id=197, 385.44pt x 97.36375pt>
+File: images/Interface.png Graphic file (type png)
+<use images/Interface.png>
+Package pdftex.def Info: images/Interface.png  used on input line 1386.
+(pdftex.def)             Requested size: 407.66833pt x 102.97775pt.
+[41] [42 <./images/Interface.png>]
+Overfull \hbox (20.07593pt too wide) in paragraph at lines 1431--1432
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/NestedInter.png, id=205, 427.5975pt x 101.37875pt>
+File: images/NestedInter.png Graphic file (type png)
+<use images/NestedInter.png>
+Package pdftex.def Info: images/NestedInter.png  used on input line 1441.
+(pdftex.def)             Requested size: 407.66833pt x 96.65422pt.
+
+Overfull \hbox (20.07593pt too wide) in paragraph at lines 1474--1475
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[43 <./images/NestedInter.png>]
+<images/Inter.png, id=211, 475.7775pt x 114.4275pt>
+File: images/Inter.png Graphic file (type png)
+<use images/Inter.png>
+Package pdftex.def Info: images/Inter.png  used on input line 1485.
+(pdftex.def)             Requested size: 407.66833pt x 98.05128pt.
+ [44 <./images/Inter.png>] [45]
+Overfull \hbox (18.74866pt too wide) in paragraph at lines 1521--1522
+\OT1/cmr/m/n/12 The fol-low-ing code demon-strates han-dling an \OT1/pcr/m/n/12 ArithmeticException \OT1/cmr/m/n/12 us-ing a \OT1/pcr/m/n/12 try-catch
+ []
+
+
+Overfull \hbox (26.64598pt too wide) in paragraph at lines 1532--1533
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (105.48662pt too wide) in paragraph at lines 1535--1536
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.49625pt too wide) in paragraph at lines 1539--1540
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/30.png, id=219, 455.7025pt x 86.3225pt>
+File: images/30.png Graphic file (type png)
+<use images/30.png>
+Package pdftex.def Info: images/30.png  used on input line 1547.
+(pdftex.def)             Requested size: 362.37569pt x 68.6458pt.
+[46 <./images/30.png>]
+Overfull \hbox (1.2941pt too wide) in paragraph at lines 1562--1563
+\OT1/cmr/m/n/12 throws an ex-cep-tion in re-sponse to com-mon er-rors (e.g., \OT1/pcr/m/n/12 NullPointerException
+ []
+
+
+Overfull \hbox (6.93582pt too wide) in paragraph at lines 1582--1583
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.49625pt too wide) in paragraph at lines 1585--1586
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[47]
+Overfull \hbox (6.93582pt too wide) in paragraph at lines 1591--1592
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<images/31.png, id=227, 477.785pt x 113.42375pt>
+File: images/31.png Graphic file (type png)
+<use images/31.png>
+Package pdftex.def Info: images/31.png  used on input line 1608.
+(pdftex.def)             Requested size: 362.37569pt x 86.0264pt.
+[48 <./images/31.png>] [49]
+<images/41.png, id=236, 377.41pt x 66.2475pt>
+File: images/41.png Graphic file (type png)
+<use images/41.png>
+Package pdftex.def Info: images/41.png  used on input line 1640.
+(pdftex.def)             Requested size: 362.37569pt x 63.60799pt.
+ [50 <./images/41.png>]
+<images/42.png, id=242, 385.44pt x 110.4125pt>
+File: images/42.png Graphic file (type png)
+<use images/42.png>
+Package pdftex.def Info: images/42.png  used on input line 1661.
+(pdftex.def)             Requested size: 362.37569pt x 103.8046pt.
+ [51 <./images/42.png>] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4703 strings out of 476041
- 71700 string characters out of 5793165
- 1904388 words of memory out of 6000000
- 25106 multiletter control sequences out of 15000+600000
- 521591 words of font info for 64 fonts, out of 8000000 for 9000
+ 4922 strings out of 476041
+ 75368 string characters out of 5793165
+ 1903388 words of memory out of 6000000
+ 25305 multiletter control sequences out of 15000+600000
+ 521884 words of font info for 65 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 57i,6n,62p,757b,1624s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,62p,757b,1650s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on main.pdf (28 pages, 395120 bytes).
+Output written on main.pdf (51 pages, 600900 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 290 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -79,16 +79,6 @@ public class Syntax {
 }
 \end{lstlisting}
 
-% \subsection{Output: }
-% \begin{}
-%     \fbox{
-%         \parbox{0.9\linewidth}{
-%             \centering
-%             \texttt{Hello, World!}
-%         }
-%     }
-% \end{}
-
 \subsection*{public class Main}
 \begin{itemize}[leftmargin=2cm]
     \item \textbf{public}: An access modifier indicating that the class is accessible from other classes.
@@ -206,7 +196,6 @@ public class NonPrimitive {
 
 \setcounter{section}{0}
 
-% \practicaltitle{Practical 2: Type casting}
 \practicaltitle{Type casting}
 Type casting is when you assign a value of one primitive data type to another type. There are two types of type casting, implicit typecasting and explicit typecasting which are explained below:
 
@@ -351,7 +340,6 @@ thereby providing a shorter, easy to debug structure of looping.
 import java.util.Scanner;
 
 public class ForLoop {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -410,9 +398,8 @@ after executing the statements, and therefore is an example of Exit Control Loop
 import java.util.Scanner;
 
 public class DoWhile {
-
     public static void main(String[] args) {
-// Sum of first n numbers
+        // Sum of first n numbers
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int n = sc.nextInt();
@@ -488,7 +475,6 @@ is true
 import java.util.Scanner;
 
 public class IfElseLad {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter age -> ");
@@ -502,8 +488,7 @@ public class IfElseLad {
         }
     }
 }
-
-    \end{lstlisting}
+\end{lstlisting}
 \subsubsection{Output: }
 \begin{figure}[H]
     \centering
@@ -520,7 +505,6 @@ complex logic
 import java.util.Scanner;
 
 public class NestedIf {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a -> ");
@@ -561,7 +545,6 @@ switch statement executes one statement from multiple conditions.
 import java.util.Scanner;
 
 public class Switch {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -593,7 +576,6 @@ public class Switch {
         }
     }
 }
-    
 \end{lstlisting}
 \subsubsection{Output: }
 \begin{figure}[H]
@@ -605,7 +587,6 @@ public class Switch {
 
 \setcounter{section}{0}
 
-% \practicaltitle{Practical 2: Type casting}
 \practicaltitle{Recursion}
 Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
 
@@ -638,14 +619,12 @@ public class Recursion {
 \subsection{Code: }
 \begin{lstlisting}
 public class Factorial {
-    static int factorial(int n)
-    {
+    static int factorial(int n) {
         if (n == 0 || n == 1)
             return 1;
         return n * factorial(n - 1);
     }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         int ans = factorial(5);
         System.out.println("Factorial of 5 is :" + ans);
     }
@@ -691,6 +670,7 @@ class AreaCalculator {
         return rectangle.length * rectangle.width;
     }
 }
+
 public class MOPOAA {
     public static void main(String[] args) {
         Circle circle = new Circle(5);
@@ -713,7 +693,6 @@ public class MOPOAA {
 
 \setcounter{section}{0}
 
-% \practicaltitle{Practical 2: Type casting}
 \practicaltitle{Constructor Overloading by passing objects as arguments}
 Constructor overloading in object-oriented programming allows a class to have multiple constructors with different parameter lists. This enables the creation of objects in different ways. When you overload constructors by passing objects as arguments, you can create new objects based on existing objects.
 
@@ -751,6 +730,7 @@ class Book {
         System.out.println("Pages: " + pages);
     }
 }
+
 public class COBPOAA {
     public static void main(String[] args) {
         // Using Constructor 1
@@ -907,7 +887,6 @@ class AccessDemo {
 \end{figure}
 \setcounter{section}{0}
 
-% \practicaltitle{Practical 2: Type casting}
 \practicaltitle{Command Line Arguments}
 Command line arguments are parameters passed to the main method when you run a program from the command line.
 \section{Syntax}
@@ -950,4 +929,738 @@ java CommandLineExample.java John Jinny Kia
     \caption{Command Line Arguments}
     \label{fig:sample_image}
 \end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Various types of inheritance by applying various access controls to its data members and methods}
+Inheritance in Java is a mechanism where a new class (child/subclass) inherits the
+properties (fields) and behaviours (methods) of an existing class (parent/superclass). It
+promotes code reuse and allows for an organized hierarchy.
+
+\textbf{Types of Inheritance in Java:}
+Java supports different types of inheritance, but multiple inheritance (where a class
+inherits from more than one class) is not supported directly to avoid ambiguity.
+Below are the types Java supports:
+
+\section{Single Inheritance:}
+A class inherits from a single superclass.
+\subsection{Code: }
+\begin{lstlisting}
+    class Employee {
+        float salary = 40000;
+    }
+
+    class Programmer extends Employee {
+        int bonus = 10000;
+        public static void main(String args[]) {
+            Programmer p = new Programmer();
+            System.out.println("Programmer salary is:" + p.salary);
+            System.out.println("Bonus of Programmer is:" + p.bonus);
+        }
+    }
+\end{lstlisting}
+
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/Programmer.png}
+    \caption{ouput of Single Inheritance}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Multilevel Inheritance:}
+A class inherits from a class that is also a subclass of another class, forming a chain of
+inheritance.
+
+\subsection{Code: }
+\begin{lstlisting}  
+class animal {
+    public static void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+class dog extends animal {
+    public static void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class puppy extends dog {
+
+    public static void play() {
+        System.out.println("Puppy plays");
+    }
+
+    public static void main(String[] args) {
+        puppy obj = new puppy();
+        obj.eat();
+        obj.bark();
+        obj.play();
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/puppy.png}
+    \caption{ouput of Multilevel Inheritance}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Hierarchical Inheritance:}
+Multiple classes inherit from a single superclass.
+
+\subsection{Code: }
+\begin{lstlisting}  
+class Animal {
+    public void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    public void meow() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class HInherit {
+    public static void main(String[] args) {
+        // Create Dog object and callmethods
+        Dog dog = new Dog();
+        dog.eat(); // Inherited method from Animal
+        dog.bark(); // Specific method of Dog
+        // Create Cat object and call methods 
+        Cat cat = new Cat();
+        cat.eat(); // Inherited method from Animal
+        cat.meow(); // Specific method of Cat
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/HInherit.png}
+    \caption{ouput of Hierarchical Inheritance}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Method overriding}
+Method overriding in Java is a key concept of Object-Oriented Programming (OOP), where a subclass (child class) provides a specific implementation of a method that is already defined in its superclass (parent class). The method in the subclass should have the same name, return type, and parameters as in the superclass. The idea is to allow a subclass to modify or enhance the behavior of the method that it inherits from its parent class
+
+\section{Example Using Code: }
+\begin{lstlisting}
+    class Car {
+        public String bestModel() {
+            return "";
+        }
+    }
+    
+    class BMW extends Car {
+        @Override
+        public String bestModel() {
+            return "M4 Competition";
+        }
+    }
+    
+    class Audi extends Car {
+        @Override
+        public String bestModel() {
+            return "RS7";
+        }
+    }
+    
+    class Porsche extends Car {
+        @Override
+        public String bestModel() {
+            return "911 gt3rs";
+        }
+    }
+    
+    public class MetOvr {
+        public static void main(String[] args) {
+            BMW bmw = new BMW();
+            Audi audi = new Audi();
+            Porsche porsche = new Porsche();
+    
+            System.out.println(bmw.bestModel());
+            System.out.println(audi.bestModel());
+            System.out.println(porsche.bestModel());
+        }
+    }    
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/MetOvrr.png}
+    \caption{ouput of Method overriding}
+    \label{fig:sample_image}
+\end{figure}
+
+\subsubsection{Example of Method overriding by Diagram: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/mETHODdIAGRAM.png}
+    \caption{Example of Method overriding}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Abstract class}
+An abstract class in Java is a class that cannot be instantiated on its own. It is used to represent an abstract concept that other classes can inherit from, providing a common structure. An abstract class can have both abstract methods (methods without a body, meant to be implemented by subclasses) and concrete methods (methods with a body)
+
+\section{Syntax: }
+\begin{lstlisting}
+    abstract class ClassName {
+    // Abstract method (no body)
+    public abstract void methodName();
+
+    // Concrete method (with body)
+    public void anotherMethod() {
+        System.out.println("This is a concrete method.");
+    }
+}
+\end{lstlisting}
+
+\subsection{Code: }
+\begin{lstlisting}
+abstract class Payment {
+    public abstract void makePayment(double amount);
+
+    public void paymentDetails(double amount) {
+        System.out.println("Payment of $" + amount + " is being processed.");
+    }
+}
+
+class CreditCardPayment extends Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Processing Credit Card Payment of $" + amount);
+    }
+}
+
+class PayPalPayment extends Payment {
+    @Override
+    public void makePayment(double amount) {
+        System.out.println("Processing PayPal Payment of $" + amount);
+    }
+}
+
+public class Abs {
+    public static void main(String[] args) {
+        Payment creditCard = new CreditCardPayment();
+        Payment payPal = new PayPalPayment();
+    
+        creditCard.paymentDetails(100.50);
+        creditCard.makePayment(100.50);   
+    
+        System.out.println(); 
+    
+        payPal.paymentDetails(50.75);  
+        payPal.makePayment(50.75);     
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/AbsOut.png}
+    \caption{ouput of abstract class}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Nested class}
+A nested class in Java is a class defined within another class. Nested classes can be
+used to logically group classes that are only used in one place, improving
+encapsulation and making the code more readable. Nested classes have access to the
+members (both static and non- static) of the outer class, depending on whether they are
+static or non-static themselves.
+
+\section{Static Nested Class :}
+A static nested class in Java is a nested class that is declared static. Since it is a static
+member of the outer class, it can be accessed without creating an instance of the outer
+class.
+However, unlike non-static inner classes, a static nested class cannot access non-static
+members (fields or methods) of the outer class directly. It can only access the static
+members (both fields and methods) of the outer class.
+
+\subsection{Code: }
+\begin{lstlisting}
+class outerClass {
+    static int outer_x = 34; // Static member
+    int outer_y = 102;
+    // Non-static member
+    private static int outerPrivate = 44; // Static member
+    static class innerClass {
+        // Static nested class
+        void display() {
+            outerClass outer = new outerClass();
+            System.out.println("Value of x: " + outer_x);
+            System.out.println("Value of y: " + outer.outer_y);
+            System.out.println("Value of private variable: " + outerPrivate);
+        }
+    }
+}
+
+public class Nest { // Separate class to run the main method
+    public static void main(String[] args) {
+        System.out.println("Static Nested Class");
+        outerClass.innerClass obj = new outerClass.innerClass();
+        obj.display(); // Call the display method}
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/nest.png}
+    \caption{ouput of nested class}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+
+\practicaltitle{Constructor chaining}
+In Java, constructor chaining is a sequence of invoking constructors upon initializing an object. It is used when we want to invoke a number of constructors, one after another by using only an instance.
+
+% \section{Static Nested Class :}
+\subsection{Code: }
+\begin{lstlisting}
+class Animal {
+    String name;
+    String speak;
+
+    Animal(){
+        this("Cat", "Meow");
+        System.out.println("This is Default Constructor");
+    }
+
+    Animal(String name, String speak) {
+        this.name = name;
+        this.speak = speak;
+        System.out.println("This is Parameterised Constructor");
+        System.out.println(name + " | " + speak);
+    }
+}
+
+public class Chain {
+    public static void main(String[] args) {
+        Animal obj1 = new Animal();
+    }
+}
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/Chain.png}
+    \caption{ouput of constructor chaining}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{Importing Classes from User-defined Package and Creating Packages Using Access Protection}
+
+\section{Packages}
+In Java, a package is a namespace that organizes a set of related classes and interfaces. Packages serve as containers for classes, helping to avoid name conflicts and making code easier to locate and manage. Java’s standard library is organized into packages (like \texttt{java.util} or \texttt{java.io}), allowing developers to reuse classes easily without having to rewrite common functionalities. By using packages, we can logically separate different components of a program and control their visibility to other classes.
+
+Packages also play a critical role in implementing access control. Java provides four levels of access control: \textbf{public}, \textbf{protected}, \textbf{default} (package-private), and \textbf{private}. These access levels determine how classes and members (fields and methods) can be accessed across different packages.
+
+\begin{itemize}
+    \item \textbf{Public}: Accessible from any other class, irrespective of the package.
+    \item \textbf{Protected}: Accessible within the same package and by subclasses in other packages.
+    \item \textbf{Default (Package-private)}: Accessible only within the same package; no modifier is needed.
+    \item \textbf{Private}: Accessible only within the class in which it is defined.
+\end{itemize}
+
+\section{Creating and Importing a User-defined Package}
+
+The following code demonstrates how to define a package, create a class within the package with various access levels, and then import and use that class in a main program.
+
+\subsection{Code for the Package (\texttt{mypackage/MyClass.java}):}
+
+\begin{lstlisting}[language=Java]
+package mypackage;
+
+public class MyClass {
+    public int publicVar = 10;
+    protected int protectedVar = 20;
+    int defaultVar = 30; // default access
+    private int privateVar = 40;
+
+    public void display() {
+        System.out.println("Public variable: " + publicVar);
+        System.out.println("Protected variable: " + protectedVar);
+        System.out.println("Default variable: " + defaultVar);
+        System.out.println("Private variable: " + privateVar);
+    }
+}
+\end{lstlisting}
+
+\subsection{Code for Importing the Package (\texttt{ImportPackage.java}):}
+
+\begin{lstlisting}[language=Java]
+import mypackage.MyClass;
+
+public class ImportPackage {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        
+        // Accessing variables with different access modifiers
+        System.out.println("Accessing public variable: " + obj.publicVar);
+        // System.out.println("Accessing protected variable: " + obj.protectedVar); // Error: Not accessible
+        // System.out.println("Accessing default variable: " + obj.defaultVar); // Error: Not accessible
+        // System.out.println("Accessing private variable: " + obj.privateVar); // Error: Not accessible
+
+        obj.display(); // Method displays all variables within the same class
+    }
+}
+\end{lstlisting}
+
+\subsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/29.png}
+    \caption{Output demonstrating access control when importing from a user-defined package}
+\end{figure}
+
+
+\setcounter{section}{0}
+
+\practicaltitle{Interfaces, nested interfaces and use of extending interfaces}
+In Java, an interface is a reference type that is similar to a class but is used to specify a
+set of abstract methods (methods without a body). Interfaces define what a class must
+do but not how it does it. Any class that implements an interface must provide an
+implementation for all of its abstract methods.
+\subsection{Code: }
+\begin{lstlisting}
+    interface Printable {
+        // Defining an interface 
+        void print(); // Abstract method
+    }
+    
+    class Document implements Printable {
+    
+        @Override
+        public void print() {
+            System.out.println("Printing a document ...");
+        }
+    }
+    
+    class Image implements Printable {
+    
+        @Override
+        public void print() {
+            System.out.println("Printing an image...");
+        }
+    }
+    
+    public class InterfaceExample {
+    
+        public static void main(String[] args) {
+            // Creating objects of classes that implement the Printable interface
+            Printable doc = new Document();
+            Printable img = new Image();
+            // Calling the print method using interface references
+            doc.print();
+            img.print();
+        }
+    }
+\end{lstlisting}
+\subsubsection{Output: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/Interface.png}
+    \caption{ouput of interface}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Nested Interfaces}
+A nested interface in Java is an interface that is declared within another interface or
+class. This allows better organization of code, especially when the interface is only
+relevant in the context of the enclosing class or interface.
+
+
+\begin{lstlisting}
+
+    class Vehicle { // Outer class
+
+    interface Engine { // Nested
+
+        void start();
+
+        void stop();
+    }
+
+    // Method to demonstrate the nested interface
+    public void useEngine() {
+        // Implementing the nested interface
+        Engine engine = new Engine() {
+            @Override
+            public void start() {
+                System.out.println("Engine is starting...");
+            }
+
+            @Override
+            public void stop() {
+                System.out.println("Engine is stopping...");
+            }
+
+        };
+        engine.start();
+        engine.stop();
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Nested Interface (Interface within Class)");
+        Vehicle vehicle = new Vehicle();
+        // Using the nested interface
+        vehicle.useEngine();
+    }
+}
+
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/NestedInter.png}
+    \caption{ouput of nested interface}
+    \label{fig:sample_image}
+\end{figure}
+
+\section{Extended Interfaces}
+
+
+\begin{lstlisting}    
+interface Animal { // Outer interface 
+void sound();
+interface Behavior { // Nested interface 
+    void eat();
+}
+}
+
+class Dog implements Animal, Animal.Behavior {
+
+@Override
+public void sound() {
+    System.out.println("Dog barks");
+}
+
+// Implementing the eat method from the nested interface
+@Override
+public void eat() {
+    System.out.println("Dog eats dog food");
+}
+}
+
+public class Inter {
+
+public static void main(String[] args) {
+    System.out.println("Nested Interface(Interface within Interface )");
+    Dog dog = new Dog();
+    dog.sound(); // Call the soundmethod dog
+    dog.eat(); // Call the eat
+
+}
+}
+
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/Inter.png}
+    \caption{ouput of Extended interface}
+    \label{fig:sample_image}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{Exception Handling - Using Predefined Exception}
+
+\section{Exceptions}
+In Java, Exception is an unwanted or unexpected event, which occurs during the execution of a program, i.e. at run time, that disrupts the normal flow of the program’s instructions. Exceptions can be caught and handled by the program. When an exception occurs within a method, it creates an object. This object is called the exception object. It contains information about the exception, such as the name and description of the exception and the state of the program when the exception occurred.
+
+
+Major reasons why an exception Occurs:
+\begin{itemize}
+    \item Invalid user input
+    \item Device failure
+    \item Loss of network connection
+    \item Physical limitations (out-of-disk memory)
+    \item Code errors
+    \item Out of bound
+    \item Null reference
+    \item Type mismatch
+    \item Opening an unavailable file
+    \item Database errors
+    \item Arithmetic errors
+\end{itemize}
+
+\section{Errors}
+Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc. Errors are usually beyond the control of the programmer, and we should not try to handle errors.
+
+\section{Exception Handling}
+Exception handling in Java is a mechanism used to handle runtime errors, allowing the normal flow of the application to be maintained. Java provides a set of predefined exceptions in the \texttt{java.lang} package, which can handle common runtime errors, such as \texttt{ArithmeticException}, \texttt{NullPointerException} and more. These exceptions are part of Java's standard library and extend the \texttt{Exception} class.
+
+
+\section{Example Code for Exception Handling Using Predefined Exception}
+
+The following code demonstrates handling an \texttt{ArithmeticException} using a \texttt{try-catch} block.
+
+\subsection{Code:}
+
+\begin{lstlisting}[language=Java]
+public class ExceptionHandling {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 0;
+
+        try {
+            int result = a / b; // This will cause an ArithmeticException
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: Division by zero is not allowed.");
+            System.out.println("Error: " + e);
+        }
+
+        System.out.println("Program continues after handling the exception.");
+    }
+}
+\end{lstlisting}
+
+\subsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/30.png}
+    \caption{Output demonstrating exception handling for ArithmeticException in Java}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{Exception Handling - Creating User-defined Exceptions}
+
+\section{User Defined Exceptions}
+In Java, we can create custom exceptions (user-defined exceptions) by extending the \texttt{Exception} class. User-defined exceptions allow developers to create exceptions specific to the application's needs, providing more meaningful error messages and handling unique error conditions.
+
+A user-defined exception is created by defining a new class that extends \texttt{Exception} or any of its subclasses. By overriding the \texttt{Exception} class’s constructors, we can customize the exception message and implement specific behaviors for our custom exception.
+
+\section{Throw Keyword}
+Java’s exception-handling mechanism includes the throw keyword, which is used to explicitly throw an exception. Exceptions can be thrown in two ways:
+\begin{itemize}
+    \item \textbf{Implicit Throwing}: This occurs when the Java runtime system automatically throws an exception in response to common errors (e.g., \texttt{NullPointerException} or \texttt{ArithmeticException}).
+    \item \textbf{Explicit Throwing}: Using the throw keyword, developers can explicitly throw an exception when a specific condition is met. This is often used with user-defined exceptions to control error handling based on custom logic.
+\end{itemize}
+
+For example, we can create an exception that will be thrown if a user enters an invalid input, such as an age below a certain threshold. The throw keyword enables us to control precisely when and where an exception occurs, ensuring more robust error handling.
+
+
+
+\section{Example Code for User-defined Exception}
+
+The following code demonstrates how to define and use a custom exception in Java.
+
+\subsection{Code:}
+
+\begin{lstlisting}[language=Java]
+public class UserDefinedException {
+    public static void main(String[] args) {
+        try {
+            checkAge(15); // This will throw an InvalidAgeException
+        } catch (InvalidAgeException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+
+        System.out.println("Program continues after handling the exception.");
+    }
+
+    // Method to check age
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above.");
+        }
+        System.out.println("Age is valid.");
+    }
+}
+
+// Custom exception class
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+\end{lstlisting}
+
+\subsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/31.png}
+    \caption{Output demonstrating a user-defined exception in Java}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{String class and its methods}
+
+\setcounter{section}{0}
+\practicaltitle{StringBuffer class and its methods}
+StringBuffer is a class in Java that represents a mutable sequence of characters. It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
+
+\section{Append Method}
+
+\subsection{Code:}
+\begin{lstlisting}
+    public class StringBufferAppend {
+        public static void main(String[] args)
+        {
+            // Append Method
+            StringBuffer sb = new StringBuffer();
+            sb.append("Hello");
+            sb.append(" ");
+            sb.append("world");
+            String message = sb.toString();
+            System.out.println(message);
+        }
+    }    
+\end{lstlisting}
+
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/41.png}
+    \caption{Output demonstrating a user-defined exception in Java}
+\end{figure}
+
+\section{Insert Method}
+\subsection{Code:}
+\begin{lstlisting}
+public class StringBufferInsert {
+    // Insert Method in String Buffer
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello");
+        sb.insert(3, "HHH");
+        String message = sb.toString();
+        System.out.println(message);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/42.png}
+    \caption{Output demonstrating a user-defined exception in Java}
+\end{figure}
+
+
 \end{document}
