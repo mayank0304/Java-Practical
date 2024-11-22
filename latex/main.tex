@@ -1610,7 +1610,211 @@ class InvalidAgeException extends Exception {
 \end{figure}
 
 \setcounter{section}{0}
-\practicaltitle{String class and its methods}
+\practicaltitle{Multithreading by extending Thread Class}
+
+\section{Program: }
+\begin{lstlisting}
+    class EvenThread extends Thread{
+        @Override
+        public void run() {
+            for (int i = 0; i < 10; i++) {
+                    System.err.println("Even Thread");
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+            }
+        }
+    }
+    
+    class OddThread extends Thread{
+        @Override
+        public void run() {
+            for (int i = 0; i < 10; i++) {
+                    System.err.println("Odd Thread");
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                
+            }
+        }
+    }
+    public class MultiThread {
+        public static void main(String[] args) {
+            Thread odd = new OddThread();
+            Thread even = new EvenThread();
+    
+            even.start();
+            odd.start();
+        }
+        
+    }
+\end{lstlisting}
+
+\subsection{Ouptut: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/Thread.png}
+    \caption{Multithreading using thread class}
+\end{figure}
+
+
+\setcounter{section}{0}
+\practicaltitle{Multithreading by implementing Runnable Interface}
+
+\section{Program: }
+\begin{lstlisting}
+
+    public class LambdaThread {
+
+    public static void main(String[] args) {
+        Runnable obj1 = () -> {
+            for (int i = 0; i < 6; i++) {
+                System.err.println("Thread 1");
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        Runnable obj2 = () -> {
+            for (int i = 0; i < 6; i++) {
+                System.err.println("Thread 2");
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Thread t1 = new Thread(obj1);
+        Thread t2 = new Thread(obj2);
+
+        t1.start();
+        t2.start();
+    }
+}
+
+\end{lstlisting}
+
+\subsection{Ouptut: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/Runnable.png}
+    \caption{Mutli threading using runnable interface}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{Thread life cycle}
+\section{Thread States}
+\begin{itemize}
+    \item New State
+    \item Runnable State
+    \item Blocked State
+    \item Waiting State
+    \item Terminated State
+\end{itemize}
+
+\begin{lstlisting}
+    // Java program to demonstrate thread states
+class thread implements Runnable {
+    public void run()
+    {
+        // moving thread2 to timed waiting state
+        try {
+            Thread.sleep(1500);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(
+            "State of thread1 while it called join() method on thread2 -"
+            + Test.thread1.getState());
+        try {
+            Thread.sleep(200);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public class Test implements Runnable {
+    public static Thread thread1;
+    public static Test obj;
+
+    public static void main(String[] args)
+    {
+        obj = new Test();
+        thread1 = new Thread(obj);
+
+        // thread1 created and is currently in the NEW
+        // state.
+        System.out.println(
+            "State of thread1 after creating it - "
+            + thread1.getState());
+        thread1.start();
+
+        // thread1 moved to Runnable state
+        System.out.println(
+            "State of thread1 after calling .start() method on it - "
+            + thread1.getState());
+    }
+
+    public void run()
+    {
+        thread myThread = new thread();
+        Thread thread2 = new Thread(myThread);
+
+        // thread2 created and is currently in the NEW
+        // state.
+        System.out.println(
+            "State of thread2 after creating it - "
+            + thread2.getState());
+        thread2.start();
+
+        // thread2 moved to Runnable state
+        System.out.println(
+            "State of thread2 after calling .start() method on it - "
+            + thread2.getState());
+
+        // moving thread2 to timed waiting state
+        try {
+            // moving thread2 to timed waiting state
+            Thread.sleep(200);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(
+            "State of thread2 after calling .sleep() method on it - "
+            + thread2.getState());
+
+        try {
+            // waiting for thread2 to die
+            thread2.join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(
+            "State of thread2 when it has finished it's execution - "
+            + thread2.getState());
+    }
+}
+\end{lstlisting}
+\subsection{Ouptut: }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/Life.png}
+    \caption{Thread Life Cycle}
+\end{figure}
 
 \setcounter{section}{0}
 \practicaltitle{StringBuffer class and its methods}
@@ -1638,7 +1842,7 @@ StringBuffer is a class in Java that represents a mutable sequence of characters
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{images/41.png}
-    \caption{Output demonstrating a user-defined exception in Java}
+    \caption{Append Method}
 \end{figure}
 
 \section{Insert Method}
@@ -1659,8 +1863,67 @@ public class StringBufferInsert {
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{images/42.png}
-    \caption{Output demonstrating a user-defined exception in Java}
+    \caption{Insert Method}
 \end{figure}
 
+\section{Replace Method}
+\subsection{Code:}
+\begin{lstlisting}
+public class StringBufferReplace {
+    // Replace Method in String Buffer
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello World");
+        sb.replace(6, 11, "Java");
+        String message = sb.toString();
+        System.out.println(message);
+    }
+}
+\end{lstlisting}
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/replace.png}
+    \caption{Delete Method}
+\end{figure}
+
+\section{Delete Method}
+\subsection{Code:}
+\begin{lstlisting}
+public class StringBufferDelete {
+    // Delete Method in String Buffer
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello World");
+        sb.delete(5, 11);
+        String message = sb.toString();
+        System.out.println(message);
+    }
+}
+\end{lstlisting}
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/DElete.png}
+    \caption{Delete Method}
+\end{figure}
+
+\section{Reverse Method}
+\subsection{Code:}
+\begin{lstlisting}
+public class StringBufferReverse {
+    // Reverse Method in String Buffer
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello");
+        sb.reverse();
+        String message = sb.toString();
+        System.out.println(message);
+    }
+}
+\end{lstlisting}
+\subsubsection{Output:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/reverse.png}
+    \caption{Reverse Method}
+\end{figure}
 
 \end{document}
