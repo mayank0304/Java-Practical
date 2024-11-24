@@ -50,16 +50,12 @@
 % Redefine \subsubsection command to use arrow instead of numbers
 \titleformat{\subsubsection}[block]{\bfseries\normalsize}{\texttt{>}}{1em}{}
 
-\title{\textbf{Java Practical}}
-\author{Mayank}
-\date{}
 
 % Redefine \subsection command to use hashtags instead of numbers
 \titleformat{\subsection}[block]{\bfseries\large}{\texttt{\#}}{1em}{}
 
 \begin{document}
 
-\maketitle
 
 \practicaltitle{Introduction to Java}
 
@@ -1924,6 +1920,115 @@ public class StringBufferReverse {
     \centering
     \includegraphics[width=0.8\linewidth]{images/reverse.png}
     \caption{Reverse Method}
+\end{figure}
+
+\setcounter{section}{0}
+\practicaltitle{String Class and Its Methods}
+The String class in Java is widely used for handling and manipulating text. Strings are immutable, meaning their content cannot be changed once created. Below are some commonly used methods of the String class:
+
+\section{toUpperCase()}
+Converts all characters in a string to uppercase.
+
+\begin{lstlisting}
+    String text = "hello world";
+    System.out.println(text.toUpperCase()); // Output: HELLO WORLD
+\end{lstlisting}
+
+\section{toLowerCase()}
+Converts all characters in a string to lowercase.
+
+\begin{lstlisting}
+    String text = "HELLO WORLD";
+    System.out.println(text.toLowerCase()); // Output: hello world
+\end{lstlisting}
+
+\section{trim()}
+Removes leading and trailing whitespace from a string.
+
+\begin{lstlisting}
+    String text = "   Java Programming   ";
+    System.out.println(text.trim()); // Output: Java Programming    
+\end{lstlisting}
+
+\section{charAt()}
+Returns the character at a specified index in a string.
+
+\begin{lstlisting}
+    String text = "Hello";
+    System.out.println(text.charAt(1)); // Output: e     
+\end{lstlisting}
+
+\section{length()}
+Returns the number of characters in a string.
+
+\begin{lstlisting}
+    String text = "Hello World";
+    System.out.println(text.length()); // Output: 11      
+\end{lstlisting}
+
+\section{replace()}
+Replaces occurrences of a specific character or substring with another character or substring.
+\begin{lstlisting}
+    String text = "I love Dart";
+    System.out.println(text.replace("Dart", "Java")); 
+    // Output: I love Java      
+\end{lstlisting}
+
+\section{valueOf()}
+Converts a specified data type into a string representation.
+\begin{lstlisting}
+    int number = 123;
+    String strNumber = String.valueOf(number);
+    System.out.println(strNumber); // Output: 123       
+\end{lstlisting}
+
+\subsection{Code:}
+\begin{lstlisting}
+    public class StringMethod {
+    public static void main(String[] args) {
+        System.out.println("toUpperClass");
+        String text = "hello world";
+        System.out.println(text.toUpperCase());
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("toLowerCase");
+        String text1 = "HELLO WORLD";
+        System.out.println(text1.toLowerCase());
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("trim");
+        String text2 = "   Java Programming   ";
+        System.out.println(text2.trim());
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("charAt");
+        String text3 = "Hello";
+        System.out.println(text3.charAt(1));
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("length");
+        String text4 = "Hello World";
+        System.out.println(text4.length());  
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("replace");
+        String text5 = "I love Dart";
+        System.out.println(text5.replace("Dart", "Java"));
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("valueOf");
+        int number = 123;
+        String strNumber = String.valueOf(number);
+        System.out.println(strNumber);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Ouput:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/StringMethod.png}
+    \caption{String Method}
 \end{figure}
 
 \end{document}

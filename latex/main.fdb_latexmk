@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732279505.68202 "/home/mayank/Documents/Java-Practical/latex/main.tex" "main.pdf" "main" 1732279506.44582 0
-  "/home/mayank/Documents/Java-Practical/latex/main.tex" 1732279504.77998 61866 cc350b2f725d03856e1a6032a1c3daa8 ""
+["pdflatex"] 1732451647.61269 "/home/mayank/Documents/Java-Practical/latex/main.tex" "main.pdf" "main" 1732451648.51931 0
+  "/home/mayank/Documents/Java-Practical/latex/main.tex" 1732451646.50342 65278 d4bca846175e8ef2aacdc1e79d166251 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1714953600 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -97,6 +97,7 @@
   "images/RecExp.png" 1725236334.22268 8146 6decee14f10333265d5a2d92f296ae76 ""
   "images/RecursionOut.png" 1725236044.68624 10646 7624f8b9b2dd4e880ac5c161a1309be8 ""
   "images/Runnable.png" 1732277447.65901 27725 05273d86a5c239f4da4d25c68eac5edf ""
+  "images/StringMethod.png" 1732451617.04241 29280 e7739de970289357a6c5cd57d83b9d92 ""
   "images/SwitchOut.png" 1723438179.80533 16811 6b5e211efbb89f4b887c3911269da07b ""
   "images/Thread.png" 1732277232.2185 42797 909dc89f9912b34c8771fcff32efe467 ""
   "images/WhileOut.png" 1723437566.70966 16812 16e9ebef055219d0da028e7b3a0ba715 ""
@@ -110,8 +111,8 @@
   "images/puppy.png" 1730683698.12792 16670 faa2ac6af3ff80b5a1eec9678474ff64 ""
   "images/replace.png" 1732278530.21794 16112 40b4145e92329533c9c9fdb6ed98290d ""
   "images/reverse.png" 1732278797.67357 15725 1f543262fb89698156f9e049d1b77c67 ""
-  "main.aux" 1732279506.38875 21604 a8a2262aad431d31f20d3a885795df6b "pdflatex"
-  "main.tex" 1732279504.77998 61866 cc350b2f725d03856e1a6032a1c3daa8 ""
+  "main.aux" 1732451648.45443 22608 629eb4b4766fe9053aba1f7c0d74f0cd "pdflatex"
+  "main.tex" 1732451646.50342 65278 d4bca846175e8ef2aacdc1e79d166251 ""
   (generated)
   "main.aux"
   "main.log"
